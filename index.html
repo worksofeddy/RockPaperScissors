@@ -3,10 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .game-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+        .score {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <script src="script.js"></script>
-    
+
+    <div class="game-container">
+        <h1>Rock Paper Scissors</h1>
+        <p>Choose your option to start playing:</p>
+
+        <div class="buttons">
+            <button onclick="startRound('rock')">Rock</button>
+            <button onclick="startRound('paper')">Paper</button>
+            <button onclick="startRound('scissors')">Scissors</button>
+        </div>
+
+        <div class="score" id="score">
+            <p>Human Score: <span id="humanScore">0</span></p>
+            <p>Computer Score: <span id="computerScore">0</span></p>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- External JavaScript file link -->
 </body>
 </html>
